@@ -13,15 +13,18 @@ import java.time.temporal.ChronoUnit;
 @NoArgsConstructor
 
 public class EarlyBirdDiscountService {
+
     boolean applyDiscount = false;
 
     public String calculateBirdDiscount(LocalDate event, LocalDate booking) {
+
         long days = ChronoUnit.DAYS.between(booking, event);
         if (days >= 30) {
             applyDiscount = true;
-            return "Yo has been applied to the early Bird Discount 15%.";
+            return "You has been applied 15% discount";
+
         }
-        return "You have not been applied any Discount, Sorry!!";
+        return "You have not been applied any discount, Sorry!!";
     }
 }
 

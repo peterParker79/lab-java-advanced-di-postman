@@ -16,6 +16,25 @@ feature.earlybird.enabled=**true**
 ### Checking Query Endpoint running Service without discount
 ![img.png](img/runningServiceWithoutDiscount.png)
 - - - 
+
+### GET Request (Calculate Discount)
+
+![GETCalculate Discount.png](img/GETCalculate%20Discount.png)
+
+### Edge Case Calculate Discount (29 days before event)
+
+![img.png](img/edgeCase.png)
+
+
+
+
+
+
+
+
+### Running tests
+![img.png](img/runningTests.png)
+
 ## Introduction
 
 In this lab, you will build a more advanced Spring Boot application that conditionally enables a new feature called **EarlyBirdDiscountService**. This service will calculate a discount for early bookings based on configurable criteria. You will then create a series of automated Postman tests to verify the behavior of your endpoint under different conditions. The lab challenges you to integrate advanced dependency injection techniques with dynamic API test automation—pushing you to design and test a feature beyond the basic examples provided in class.
