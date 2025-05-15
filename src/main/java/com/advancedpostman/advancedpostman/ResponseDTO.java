@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 
-public class RequestDTO {
+public class ResponseDTO {
 
     String eventDate;
     String bookingDate;

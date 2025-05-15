@@ -2,12 +2,19 @@
 
 # LAB Java | Advanced DI & Postman Power-Up
 
-Checking Query Endpoint
-![img.png](ckeckingQueryEndpoindDates.png)
+### Checking Query Endpoint with No running Service
+feature.earlybird.enabled=**false**
 
 
+![img.png](img/noRunningService.png)
+
+### Checking Query Endpoint running Service with discount
+feature.earlybird.enabled=**true**
+![img.png](img/runningServiceWithDiscount.png)
 
 
+### Checking Query Endpoint running Service without discount
+![img.png](img/runningServiceWithoutDiscount.png)
 - - - 
 ## Introduction
 
