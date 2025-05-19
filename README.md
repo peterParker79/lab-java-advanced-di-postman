@@ -35,6 +35,36 @@ feature.earlybird.enabled=**true**
 ### Running tests
 ![img.png](img/runningTests.png)
 
+
+## Respuestas
+
+### Inyección de dependencia en el constructor.
+Tener la inyección de la dependencia en el constructor de la siguiente manera:
+
+`public EarlyBirdController(@Autowired(required = false) EarlyBirdDiscountService discountService) {
+  this.earlyBirdDiscountService = discountService;
+
+Me da la flexilidad de incicar que el servicio podría no estar disponible.
+Considerando el el servicio de ofertas puede deshabilitarse a través de aplication.properties
+es la mejor opción en este caso de añadir la dependencia.
+
+### Ventajas y desventajas  de pre solicitud y post respuesta en las pruebas automatizadas de postman
+Antes de enviar la petición, la pre request me permite tener variables que sean dinámicas.
+Puedo generar tokens, Ids.... es decir, parametrizar.
+
+Las post Response me permites guardar valores de resultados, guardar estados y
+guardar valores para concatenar con la siguiente llamada,
+realizar test automátizados.
+
+## Comportamiento de la APP con early bir disabled
+Se muestra un mensaje indicando que dicho servicio está deshabilitado.
+
+## Desafíos.
+La gestión y emplementación correcta, manejando errores de
+manera oportuna cuando el servicio pueda estar habilitado o no.
+La propia funcionalidad de habilitar/Deshabilitar el sevicio.
+
+
 ## Introduction
 
 In this lab, you will build a more advanced Spring Boot application that conditionally enables a new feature called **EarlyBirdDiscountService**. This service will calculate a discount for early bookings based on configurable criteria. You will then create a series of automated Postman tests to verify the behavior of your endpoint under different conditions. The lab challenges you to integrate advanced dependency injection techniques with dynamic API test automation—pushing you to design and test a feature beyond the basic examples provided in class.
